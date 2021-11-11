@@ -15,6 +15,10 @@
 	<description>Product  MicroService </description>
 	<properties>
 		<java.version>11</java.version>
+		<sonar.projectKey>jayasrisng_ProductMS</sonar.projectKey>
+		<sonar.organization>jayasrisng</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io/</sonar.host.url>
+		<sonar.login>e11175e63d0bf3d027741ba5f8c79b8f65da2847</sonar.login>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -24,8 +28,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-		
+		</dependency>	
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -49,12 +52,15 @@
 	</dependencies>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
+  	<pluginManagement>
+    		<plugins>
+      		<plugin>
+       		 <groupId>org.codehaus.sonar</groupId>
+       		 <artifactId>sonar-maven-plugin</artifactId>
+      		  <version>2.5.6</version>
+     		 </plugin>
+   		 </plugins>
+	</pluginManagement>
 	</build>
 
 </project>
